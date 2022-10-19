@@ -1,38 +1,85 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 .App {
-  text-align: center;
+    margin: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+    display: flex;
+    /* padding-bottom: 10px;  OR dispaly:flex;*/
+    border-bottom: 2px solid black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.cartIcon {
+    position: absolute;
+    right: 0;
+    margin-right: 2%;
+    margin-top: 0.5%;
+    font-size: large;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.navbar {
+    background-color: white;
+    width: 85%;
 }
 
-.App-link {
-  color: #61dafb;
+.navLinks {
+    display: flex;
+    list-style: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navLinks a {
+    text-decoration: none;
+    margin-left: 30px;
+}
+
+.greet {
+    background-color: aquamarine;
+    margin: 0.5% 0.5%;
+}
+
+.home {
+    background-color: blueviolet;
+    display: inline-flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: 5px;
+    padding: 5px;
+}
+
+.saved {
+    background-color: red
+}
+
+.electronics {
+    background-color: orange;
+    color: white;
+}
+
+.clothes {
+    background-color: yellowgreen;
+}
+
+.clothesLinks {
+    list-style: none;
+}
+
+.clothesLinks a {
+    text-decoration: none;
+}
+
+.furniture {
+    background-color: yellow;
+}
+
+.furnLinks {
+    list-style: none;
+}
+
+.furnLinks a {
+    text-decoration: none;
 }
