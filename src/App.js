@@ -3,6 +3,8 @@ import { Routes, Route, Link } from 'react-router-dom'
 import Login from './Login.js';
 import Home from './Home.js';
 import Register from './Register.js';
+import Product from './Product.js';
+import Products from './Products.js';
 import Header from './Header.js';
 import Saved from './categories/Saved.js'
 import Electronics from './categories/Electronics.js'
@@ -29,9 +31,13 @@ function App() {
           <Route path='furniture' element={<Furniture />} />
           {/* <Route path='/topics/:name' element={<Saved />} /> */}
         </Route>
+        <Route path='product/:id' element={<Product />} />
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} />
       </Routes>
+
+      <Products />
+      {/* <Product />  */}
 
     </div>
   );

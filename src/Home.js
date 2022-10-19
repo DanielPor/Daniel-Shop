@@ -1,5 +1,6 @@
 import React from 'react'
 import NavBar from './NavBar.js'
+import Products from './Products.js'
 
 function Home() {
     return (
@@ -7,6 +8,7 @@ function Home() {
             <h4>Home Page</h4>
 
             <NavBar />
+
 
 
         </div>
