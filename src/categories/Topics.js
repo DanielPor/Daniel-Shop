@@ -1,33 +1,26 @@
-import { Link, useParams } from 'react-router-dom'
-import { useState, useEffect } from 'react'
 import axios from 'axios'
+import React, { useState } from 'react'
 
 const topicsURL = 'http://localhost:8000/topics'
 
-const [topics, setTopics] = useState([])
-const { name } = useParams()
-console.log(name);
-
-useEffect(() => {
-    const fetchData = async () => {
-        const { data } = await axios.get(`${topicsURL}/${name}`)
-        setTopics(data)
-    }
-    fetchData()
-}, [])
-
 function Topics() {
+    const [topics, setTopics] = useState()
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const { data } = await axios.get(topicsURL)
+            console.log(data);
+        }
+        fetchData()
+    }, [])
+
+
+
     return (
         <div>
-            <h4>Furniture</h4>
-
-            <ul className='furnLinks'>
-                {topics.map(topic => {
-                    return (
-                        <li key={topic.id}><Link to='{topic.category}'>{topic.category}</Link></li>
-                    )
-                })}
-            </ul>
+            {/* <ul>
+                
+            </ul> */}
         </div>
     )
 }

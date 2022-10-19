@@ -83,3 +83,21 @@
 .furnLinks a {
     text-decoration: none;
 }
+
+.product {
+    border: 2px solid red;
+    width: max-content;
+    margin-left: 5%;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+
+    border: 2px solid blue;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+}
