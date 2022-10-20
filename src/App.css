@@ -6,6 +6,7 @@
 
 .App {
     margin: 10px;
+    text-align: center;
 }
 
 .header {
@@ -24,6 +25,10 @@
     margin-right: 2%;
     margin-top: 0.5%;
     font-size: large;
+}
+
+.webNameTitle {
+    text-align: left;
 }
 
 .navbar {
@@ -52,6 +57,7 @@
 
 .categories {
     background-color: yellowgreen;
+    text-align: left;
 }
 
 .categoryLinks {

@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import axios from 'axios'
 
 const productsUrl = 'http://localhost:8000/products'
 
 function Products() {
     const [products, setProducts] = useState([])
+    const { category } = useParams()
 
     useEffect(() => {
         const fetchData = async () => {
@@ -19,13 +20,16 @@ function Products() {
     return (
         <div className='products'>
             {products.map(prod => {
-                return (
-                    <div className='product' key={prod.id}>
-                        <Link to={`/product/${prod.id}`}> <img src={prod.image} alt="photo" /> </Link>
-                        <strong>Name:</strong>{prod.name}
-                        Price:{prod.price}
-                    </div>
-                )
+                if (prod.category === category) {
+                    return (
+                        <div className='product' key={prod.id}>
+                            {console.log(prod.category)}
+                            <Link to={`/product/${prod.id}`}> <img src={prod.image} alt="photo" /> </Link>
+                            <strong>Name:</strong>{prod.name}
+                            Price:{prod.price}
+                        </div>
+                    )
+                }
             })}
         </div>
     )
