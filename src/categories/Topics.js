@@ -1,26 +1,32 @@
 import axios from 'axios'
-import React, { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { useParams, Link } from 'react-router-dom'
 
 const topicsURL = 'http://localhost:8000/topics'
 
 function Topics() {
-    const [topics, setTopics] = useState()
+    const [topics, setTopics] = useState([])
+    const { name } = useParams()
 
     useEffect(() => {
         const fetchData = async () => {
             const { data } = await axios.get(topicsURL)
-            console.log(data);
+            setTopics(data);
         }
         fetchData()
     }, [])
 
-
-
     return (
-        <div>
-            {/* <ul>
-                
-            </ul> */}
+        <div className='categories'>
+            <ul className='categoryLinks'>
+                {topics.map(top => {
+                    if (top.name === name) {
+                        return (
+                            <li key={top.id}><Link to='/products'>{top.category}</Link></li>
+                        )
+                    }
+                })}
+            </ul>
         </div>
     )
 }

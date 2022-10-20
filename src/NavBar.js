@@ -8,18 +8,10 @@ function NavBar() {
         <div className='navbar'>
             <ul className='navLinks'>
                 <li><Link to='saved'>saved</Link></li>
-                <li><Link to='electronics'>electronics</Link></li>
-                <li><Link to='clothes'>clothes</Link></li>
-                <li><Link to='furniture'>furniture</Link></li>
-            </ul>
-
-
-            {/* <ul className='navLinks'>
-                <li><Link to='topics/saved'>saved</Link></li>
                 <li><Link to='topics/electronics'>electronics</Link></li>
                 <li><Link to='topics/clothes'>clothes</Link></li>
                 <li><Link to='topics/furniture'>furniture</Link></li>
-            </ul> */}
+            </ul>
 
             <Outlet />
         </div>
