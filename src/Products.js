@@ -10,12 +10,10 @@ function Products() {
     useEffect(() => {
         const fetchData = async () => {
             const { data } = await axios.get(productsUrl)
-            console.log(data);
             setProducts([...data]);
         }
         fetchData()
     }, [])
-
 
 
     return (
