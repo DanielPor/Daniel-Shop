@@ -21,7 +21,7 @@ function App() {
     <div className="App">
 
       <Header />
-      <h1>Daniel Store</h1>
+      <h1 className='webNameTitle'>Daniel Store</h1>
       <FontAwesomeIcon icon="fa-solid fa-cart-shopping" />
 
       <Routes>
@@ -35,7 +35,7 @@ function App() {
         <Route path='product/:id' element={<Product />} />
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} />
-        <Route path='/products' element={<Products />} />
+        <Route path='/products/:category' element={<Products />} />
       </Routes>
       {/* <Product />  */}
 
