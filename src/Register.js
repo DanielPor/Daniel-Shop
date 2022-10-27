@@ -20,15 +20,29 @@ function Register() {
 
 
     return (
-        <div>
+        <div className='registerForm'>
             <form onSubmit={handleSubmit}>
                 <h1>Register Page!</h1>
-                <strong>Full Name:</strong> <input type="text" name="fullName" onChange={handleChange} /> <br />
-                <strong>Username:</strong><input type="text" name="username" onChange={handleChange} /><br />
-                <strong>Email:</strong><input type="text" name="email" onChange={handleChange} /><br />
-                <strong>Password:</strong><input type="text" name="password" onChange={handleChange} /><br />
-                <strong>Repeat Password:</strong><input type="text" name="password2" onChange={handleChange} /><br />
-
+                <div className='inputDiv'>
+                    <label><strong>Full Name: </strong></label>
+                    <input type="text" name="fullName" onChange={handleChange} /> <br />
+                </div>
+                <div className='inputDiv'>
+                    <label><strong>Username: </strong></label>
+                    <input type="text" name="username" onChange={handleChange} /> <br />
+                </div>
+                <div className='inputDiv'>
+                    <label><strong>Email: </strong></label>
+                    <input type="text" name="email" onChange={handleChange} /> <br />
+                </div>
+                <div className='inputDiv'>
+                    <label><strong>Password: </strong></label>
+                    <input type="text" name="password" onChange={handleChange} /> <br />
+                </div>
+                <div className='inputDiv'>
+                    <label><strong>Repeat Password: </strong></label>
+                    <input type="text" name="password2" onChange={handleChange} /> <br />
+                </div>
                 <button onClick={addUser}>Register</button>
             </form>
         </div>

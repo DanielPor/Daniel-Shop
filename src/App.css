@@ -6,13 +6,12 @@
 
 .App {
     margin: 10px;
-    text-align: center;
 }
 
 .header {
     display: flex;
-    /* padding-bottom: 10px;  OR dispaly:flex;*/
     border-bottom: 2px solid black;
+    /* padding-bottom: 10px;  OR dispaly:flex; */
 }
 
 .greet {
@@ -43,45 +42,64 @@
 
 .navLinks a {
     text-decoration: none;
-    margin-left: 30px;
+    margin-left: 50px;
 }
 
 .home {
-    background-color: blueviolet;
-    display: inline-flex;
-    justify-content: space-around;
-    width: 80%;
+    width: 100%;
     margin: 5px;
     padding: 5px;
 }
 
 .categories {
-    background-color: yellowgreen;
-    text-align: left;
+    background-color: rgb(194, 243, 248);
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-left: 2.5%;
+    margin-top: .5%;
+    width: 24%;
 }
 
 .categoryLinks {
     list-style: none;
+    padding: 2%;
 }
 
 .categoryLinks a {
     text-decoration: none;
-    margin-left: 3%;
+    margin-left: 2%;
 }
 
 .product {
     border: 2px solid black;
     width: max-content;
     padding: 1%;
-    margin: 3%;
+    margin: 2%;
+    text-align: start;
     /* column-count: 3;
     column-gap: 40px; */
 }
 
 .products {
-    display: flex;
-    flex-wrap: wrap;
-    border: 2px solid blue;
+    /* display: flex;
+    flex-wrap: wrap; */
+}
+
+.search-bar {
+    width: 50%;
+    height: 3.5vh;
+    border-radius: 5px;
+}
+
+.searchDiv {
+    text-align: center;
+}
+
+.btnSearch {
+    border-radius: 5px;
+    width: 10%;
+    height: 3.5vh;
+    margin-left: 1%;
 }
 
 img {
@@ -91,4 +109,31 @@ img {
 
 a:hover {
     text-decoration: underline;
+}
+
+button {
+    width: 20%;
+    height: 3vh;
+    border-radius: 5px;
+}
+
+.loginForm,
+.registerForm {
+    margin: 0 auto;
+    margin-top: 10%;
+    border: 5px solid grey;
+    border-radius: 10px;
+    width: 30%;
+    padding: 3%;
+    background-image: linear-gradient(to top right, red, rgb(24, 24, 238));
+}
+
+input {
+    border-radius: 5px;
+    height: 2.5vh;
+    border: 2px solid black;
+}
+
+.loginInputDiv {
+    margin: 2%;
 }

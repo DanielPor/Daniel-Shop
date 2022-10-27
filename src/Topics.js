@@ -22,7 +22,7 @@ function Topics() {
                 {topics.map(top => {
                     if (top.name === name) {
                         return (
-                            <li key={top.id}><Link to={`/products/${top.category}`}>{top.category}</Link></li>
+                            <li key={top.id}><Link to={`/products?category=${top.category}`}>{top.category}</Link></li>
                         )
                     }
                 })}
