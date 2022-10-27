@@ -19,10 +19,10 @@ function Product() {
 
     return (
         <div className='product' key={id}>
-            <h1>PRODUCT</h1>
+            <strong>{product.name}</strong> <br />
             {<img src={product.image} alt="photo" />} <br />
-            <strong>Name:</strong>{product.name} <br />
-            <strong>Price:</strong>{product.price}
+            <strong>Price:</strong>{product.price} <br />
+            <strong>Color:</strong> {product.color}
         </div>
     )
 }
