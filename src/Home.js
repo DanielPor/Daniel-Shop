@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import NavBar from './NavBar.js'
 import Search from './Search.js';
 import Header from './Header.js';
+import Slider from './Slider.js';
+// import useContext from 'react'
 
 function Home() {
+
     return (
         <div className='home'>
 
@@ -16,6 +19,8 @@ function Home() {
             <h4>Home Page</h4>
 
             <NavBar />
+
+            <Slider />
 
         </div>
     )
