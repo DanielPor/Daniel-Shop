@@ -1,11 +1,15 @@
-import React, { useState, useEffect } from 'react'
-import { Link, useSearchParams } from 'react-router-dom'
+import React, { useState, useEffect, useContext } from 'react'
+import { Link } from 'react-router-dom'
 import axios from 'axios'
+import ProductContext from './context/ProductContext'
+import WishlistContext from './context/WishlistContext'
 
 const productsUrl = 'http://localhost:8000/products'
 
 function Products() {
     const [products, setProducts] = useState([])
+    const { prodWishlist, setProdWishlist } = useContext(WishlistContext)
+    const { prodCart, setProdCart } = useContext(ProductContext)
     //option 1: Using React Router 
     // const [searchParams, setSearchParams] = useSearchParams()
     // const category2 = searchParams.get("category")
@@ -30,6 +34,8 @@ function Products() {
                         <strong>{prod.name}</strong> <br />
                         <Link to={`/product/${prod.id}`}> <img src={prod.image} alt="photo" /> </Link> <br />
                         <strong>Price:</strong> {prod.price} <br />
+                        <button onClick={() => setProdCart(prod)}>Add To Cart</button>
+                        <button onClick={() => setProdWishlist(prod)}>Wishlist</button>
                     </div>
                 )
             })}
