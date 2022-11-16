@@ -5,11 +5,14 @@ import ProductContext from './context/ProductContext'
 import WishlistContext from './context/WishlistContext'
 
 const productsUrl = 'http://localhost:8000/products'
+const cartUrl = 'http://localhost:8000/cart'
+const wishListUrl = 'http://localhost:8000/wishList'
 
 function Products() {
     const [products, setProducts] = useState([])
-    const { prodWishlist, setProdWishlist } = useContext(WishlistContext)
-    const { prodCart, setProdCart } = useContext(ProductContext)
+    // const { prodWishlist, setProdWishlist } = useContext(WishlistContext)
+    // const { prodCart, setProdCart } = useContext(ProductContext)
+
     //option 1: Using React Router 
     // const [searchParams, setSearchParams] = useSearchParams()
     // const category2 = searchParams.get("category")
@@ -32,10 +35,16 @@ function Products() {
                 return (
                     <div className='product' key={prod.id}>
                         <strong>{prod.name}</strong> <br />
-                        <Link to={`/product/${prod.id}`}> <img src={prod.image} alt="photo" /> </Link> <br />
+                        <Link to={`/product/${category}/${prod.id}`}> <img src={prod.image} alt="photo" /> </Link> <br />
                         <strong>Price:</strong> {prod.price} <br />
-                        <button onClick={() => setProdCart(prod)}>Add To Cart</button>
-                        <button onClick={() => setProdWishlist(prod)}>Wishlist</button>
+                        <button onClick={async () => {
+                            const { data } = await axios.post(cartUrl, prod)
+                            alert(data)
+                        }}>Add To Cart</button>
+                        <button onClick={async () => {
+                            const { data } = await axios.post(wishListUrl, prod)
+                            alert(data)
+                        }}>Wishlist</button>
                     </div>
                 )
             })}
