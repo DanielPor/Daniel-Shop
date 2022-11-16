@@ -34,7 +34,7 @@ function App() {
               </Route>
               <Route path='/login' element={<Login />} />
               <Route path='/register' element={<Register />} />
-              <Route path='product/:id' element={<Product />} />
+              <Route path='product/:category/:id' element={<Product />} />
             </Routes>
           </WishlistContext.Provider>
         </UserContext.Provider>
