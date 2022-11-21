@@ -1,3 +1,5 @@
+# Database - https://github.com/DanielPor/shopDB
+# server - https://github.com/DanielPor/Shop-Server
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
